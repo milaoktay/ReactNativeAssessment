@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   artwork: {
     width: 90,
     height: 90,
-    borderRadius: 8,
+    borderRadius: 12,
   },
   detailsContainer: {
     flex: 1,

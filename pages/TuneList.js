@@ -2,11 +2,17 @@ import { StyleSheet, View, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SingleTuneFromList } from "../components/SingleTuneFromList";
 import { useLayoutEffect } from "react";
-
+import React from "react";
 import ringtonesData from "../assets/ringtones.json"; // Import the JSON data
 
 export const TuneList = () => {
   const navigation = useNavigation();
+
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      title: "Top 100",
+    });
+  }, [navigation]);
 
   return (
     <>
@@ -33,7 +39,7 @@ export const TuneList = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "darkcrimson",
+    backgroundColor: "#282727",
   },
   listContainer: {
     paddingVertical: 16,
