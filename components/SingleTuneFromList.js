@@ -1,12 +1,16 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
 export const SingleTuneFromList = ({ tune, onPress }) => {
-  const { title, artist, artworkUri, audio } = tune;
+  const { title, artist, artwork, audio } = tune;
   return (
     <>
       <TouchableOpacity style={styles.container} onPress={onPress}>
         <View style={styles.artworkContainer}>
-          <Image source={{ uri: artworkUri }} style={styles.artwork} />
+          <Image
+            source={{ uri: artwork }}
+            defaultSource={require("../assets/fallback-img.jpg")}
+            style={styles.artwork}
+          />
         </View>
         <View style={styles.detailsContainer}>
           <Text numberOfLines={1} style={styles.title}>

@@ -1,17 +1,22 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 
-export const TuneDetails = () => {
+export const TuneDetails = ({ tune, onPress }) => {
+  const { title, artist, artwork, audio } = tune;
+
   return (
     <>
-      <View style={styles.container}>
+      <View style={styles.artworkContainer}>
         <Image
-          source={{
-            uri: "https://picsum.photos/200/300",
-          }}
-          fadeDuration={1000}
-          style={styles.image}
+          source={{ uri: artwork }}
+          defaultSource={require("../assets/fallback-img.jpg")}
+          style={styles.artwork}
         />
-        <Text>blablabla</Text>
+      </View>
+      <View style={styles.detailsContainer}>
+        <Text numberOfLines={1} style={styles.title}>
+          {title}
+        </Text>
+        <Text style={styles.artist}>{artist}</Text>
       </View>
     </>
   );

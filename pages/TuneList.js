@@ -7,18 +7,14 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { SingleTuneFromList } from "../components/SingleTuneFromList";
 import { TuneDetails } from "./TuneDetails";
 
 import ringtonesData from "../assets/ringtones.json"; // Import the JSON data
 
 export const TuneList = () => {
-  const renderItem = ({ item }) => (
-    <SingleTuneFromList
-      tune={item}
-      onPress={() => navigation.navigate("SingleTune", { tune: item })}
-    />
-  );
+  const navigation = useNavigation();
   return (
     <>
       <View style={styles.container}>
@@ -29,7 +25,7 @@ export const TuneList = () => {
                 <SingleTuneFromList
                   tune={item}
                   onPress={() =>
-                    navigation.navigate("SingleTune", { tune: item })
+                    navigation.navigate("TuneDetails", { tune: item })
                   }
                 />
               </View>
