@@ -1,7 +1,34 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import React from "react";
+import { StyleSheet, Text, View, Image, Button } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Audio } from "expo-av";
+import { useLayoutEffect } from "react";
 
-export const TuneDetails = ({ tune, onPress }) => {
+export const TuneDetails = ({ route }) => {
+  const { tune } = route.params;
   const { title, artist, artwork, audio } = tune;
+
+  const navigation = useNavigation();
+  const sound = new Audio.Sound();
+
+  const handlePlayAudio = async () => {
+    try {
+      await sound.loadAsync({ uri: audio });
+      await sound.playAsync();
+    } catch (error) {
+      console.log("Error playing audio:", error);
+    }
+  };
+
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      title: "Go Back", // Set the title to the tune title
+    });
+  }, [navigation, title]);
+
+  const handleGoBack = () => {
+    navigation.goBack();
+  };
 
   return (
     <>
@@ -17,21 +44,31 @@ export const TuneDetails = ({ tune, onPress }) => {
           {title}
         </Text>
         <Text style={styles.artist}>{artist}</Text>
+        <Button title="Play" onPress={handlePlayAudio} />
+        <Button title="Go Back" onPress={handleGoBack} />
       </View>
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  image: {
-    borderRadius: 20,
-    width: 300,
-    height: 300,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
+  artworkContainer: {
     alignItems: "center",
-    justifyContent: "center",
+    marginVertical: 20,
+  },
+  artwork: {
+    width: 200,
+    height: 200,
+  },
+  detailsContainer: {
+    alignItems: "center",
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 8,
+  },
+  artist: {
+    fontSize: 16,
   },
 });

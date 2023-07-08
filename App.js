@@ -2,38 +2,30 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
 import { BottomTabNavigator } from "./components/BottomBar";
 import { TuneList } from "./pages/TuneList";
+import { TuneDetails } from "./pages/TuneDetails";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar style="auto" color="white" />
-      <NavigationContainer>
-        <TuneList />
-      </NavigationContainer>
-    </SafeAreaView>
+    <NavigationContainer>
+      <SafeAreaView style={styles.container}>
+        <StatusBar style="auto" color="white" />
+        <Stack.Navigator>
+          <Stack.Screen name="TuneList" component={TuneList} />
+          <Stack.Screen name="TuneDetails" component={TuneDetails} />
+        </Stack.Navigator>
+      </SafeAreaView>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  topBar: {
-    height: "5%", // Adjust the height as needed
-    width: "100%",
-    backgroundColor: "black",
-    color: "black",
-  },
-  content: {
-    height: 100,
-    justifyContent: "center",
-    alignItems: "center",
+    backgroundColor: "#282727",
+    padding: 5,
   },
 });

@@ -1,20 +1,13 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  FlatList,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SingleTuneFromList } from "../components/SingleTuneFromList";
-import { TuneDetails } from "./TuneDetails";
+import { useLayoutEffect } from "react";
 
 import ringtonesData from "../assets/ringtones.json"; // Import the JSON data
 
 export const TuneList = () => {
   const navigation = useNavigation();
+
   return (
     <>
       <View style={styles.container}>
