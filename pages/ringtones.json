@@ -4,7 +4,7 @@
     "title": "Nostalgia",
     "artist": "Lite Saturation",
     "artwork": "https://freemusicarchive.org/image/?file=track_image%2FnB6qZcxdtXTzlfrS6ihWmcfldGK1KBgcvAj3F5MJ.jpg&width=290&height=290&type=track",
-    "audio": "./audio/Lite Saturation - Nostalgia.mp3",
+    "audio": "../assets/audio/1.mp3",
     "license": "CC BY-ND",
     "source": "Free Music Archive"
   },

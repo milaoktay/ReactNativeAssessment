@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -9,22 +9,35 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Audio } from "expo-av";
-import { useLayoutEffect } from "react";
 
 export const TuneDetails = ({ route }) => {
   const { tune } = route.params;
-  const { title, artist, artwork, audio } = tune;
+  const { id, title, artist, artwork, audio } = tune;
+  const [sound, setSound] = useState(null);
 
   const navigation = useNavigation();
+
   console.log(audio);
 
   const handlePlayAudio = async () => {
     try {
-      const sound = new Audio.Sound();
-      await sound.loadAsync({ uri: audio });
+      const { sound } = await Audio.Sound.createAsync(
+        require(`../assets/audio/${1}.mp3`)
+      );
+      setSound(sound);
       await sound.playAsync();
     } catch (error) {
-      console.log("Error playing audio:", error);
+      // handle error
+    }
+  };
+
+  const handlePauseAudio = async () => {
+    if (sound) {
+      try {
+        await sound.pauseAsync();
+      } catch (error) {
+        // handle error
+      }
     }
   };
 
@@ -62,8 +75,8 @@ export const TuneDetails = ({ route }) => {
           <TouchableOpacity style={styles.button} onPress={handlePlayAudio}>
             <Text style={styles.buttonText}>Play</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={handleGoBack}>
-            <Text style={styles.buttonText}>Go Back</Text>
+          <TouchableOpacity style={styles.button} onPress={handlePauseAudio}>
+            <Text style={styles.buttonText}>Pause</Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -6,11 +6,7 @@ export const SingleTuneFromList = ({ tune, onPress }) => {
     <>
       <TouchableOpacity style={styles.container} onPress={onPress}>
         <View style={styles.artworkContainer}>
-          <Image
-            source={{ uri: artwork }}
-            defaultSource={require("../assets/fallback-img.jpg")}
-            style={styles.artwork}
-          />
+          <Image source={{ uri: artwork }} style={styles.artwork} />
         </View>
         <View style={styles.detailsContainer}>
           <Text numberOfLines={1} style={styles.title}>
