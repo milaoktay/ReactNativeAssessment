@@ -39,5 +39,4 @@ The Details screen offers the following features:
 - Execute 'expo start' in terminal and scan the QR code with it
 - Or execute 'expo publish' in terminal, open the link and scan the QR code with your phone's camera
 
-![Screen1](./assets/screenshots/Screen1.jpg)
-![Screen2](./assets/screenshots/Screen2.jpg)
+![Screen1](./assets/screenshots/Screen1.jpg) ![Screen2](./assets/screenshots/Screen2.jpg)
