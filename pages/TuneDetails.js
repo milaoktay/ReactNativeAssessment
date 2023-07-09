@@ -12,8 +12,8 @@ import { Audio } from "expo-av";
 
 // Mapping object for audio file paths based on ID
 const audioFilePaths = {
-  1: require("../assets/Lite Saturation - Nostalgia.mp3"),
-  2: require("../assets/Axel Lundstrom - Measure by measure.mp3"),
+  1: require("../assets/audio/Lite Saturation - Nostalgia.mp3"),
+  2: require("../assets/audio/Axel Lundstrom - Measure by measure.mp3"),
   // Add more audio file paths for different IDs as needed
 };
 
@@ -89,11 +89,13 @@ export const TuneDetails = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+
     backgroundColor: "#282727",
     justifyContent: "center",
     alignItems: "center",
   },
   detailsContainer: {
+    width: "90%",
     backgroundColor: "#504f4f",
     borderRadius: 10,
     padding: 20,
@@ -103,8 +105,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   artwork: {
-    width: 200,
-    height: 200,
+    width: 300,
+    height: 300,
     borderRadius: 20,
   },
   textContainer: {

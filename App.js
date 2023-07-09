@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
-import { BottomTabNavigator } from "./components/BottomBar";
+import { StyleSheet, SafeAreaView } from "react-native";
 import { TuneList } from "./pages/TuneList";
 import { TuneDetails } from "./pages/TuneDetails";
 import { NavigationContainer } from "@react-navigation/native";
