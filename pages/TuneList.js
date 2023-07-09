@@ -11,6 +11,10 @@ export const TuneList = () => {
   React.useLayoutEffect(() => {
     navigation.setOptions({
       title: "Top 100",
+      headerStyle: {
+        backgroundColor: "#282727",
+      },
+      headerTintColor: "white",
     });
   }, [navigation]);
 

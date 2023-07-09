@@ -21,7 +21,7 @@ export const TuneDetails = ({ route }) => {
   const handlePlayAudio = async () => {
     try {
       const sound = new Audio.Sound();
-      await sound.loadAsync(require(audio));
+      await sound.loadAsync({ uri: audio });
       await sound.playAsync();
     } catch (error) {
       console.log("Error playing audio:", error);
@@ -31,6 +31,10 @@ export const TuneDetails = ({ route }) => {
   React.useLayoutEffect(() => {
     navigation.setOptions({
       title: "Go Back",
+      headerStyle: {
+        backgroundColor: "#282727",
+      },
+      headerTintColor: "white",
     });
   }, [navigation]);
 
