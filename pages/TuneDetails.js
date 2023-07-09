@@ -46,7 +46,7 @@ export const TuneDetails = ({ route }) => {
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
-      title: "Go Back",
+      title: "",
       headerStyle: {
         backgroundColor: "#282727",
       },
