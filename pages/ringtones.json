@@ -28,110 +28,65 @@
   },
   {
     "id": 4,
-    "title": "Ringtone 4",
-    "artist": "Artist 4",
-    "artwork": "",
+    "title": "Blue Lola",
+    "artist": "Fignomo",
+    "artwork": "https://freemusicarchive.org/image/?file=album_image%2Faw8XzUxjb4fl25moscvFOpVpnF4TdPS1VYDv1I9v.jpg&width=290&height=290&type=album",
     "audio": "ringtone4.mp3",
     "license": "CC BY-ND",
     "source": "Free Music Archive"
   },
   {
     "id": 5,
-    "title": "Ringtone 5",
-    "artist": "Artist 5",
-    "artwork": "https://picsum.photos/200/300",
+    "title": "Coffee at Midnight",
+    "artist": "Akira Sora ",
+    "artwork": "https://freemusicarchive.org/image/?file=track_image%2FeoULhQUrVDof5e1iCowUqhxwDTCyG0gfmtOrPvdx.png&width=290&height=290&type=track",
     "audio": "ringtone5.mp3",
     "license": "CC BY-ND",
     "source": "Free Music Archive"
   },
   {
     "id": 6,
-    "title": "Ringtone 1",
-    "artist": "Artist 1",
-    "artwork": "https://picsum.photos/200/300",
+    "title": "Purple Soda",
+    "artist": "HoliznaPATREON ",
+    "artwork": "https://freemusicarchive.org/image/?file=album_image%2Fq611YV7jAVPOvJtIpNTFUv1RfssK6AjV1vIXO4px.jpg&width=290&height=290&type=album",
     "audio": "ringtone1.mp3",
-    "license": "CC BY-ND",
+    "license": "CC BY-ND-NC",
     "source": "Free Music Archive"
   },
   {
     "id": 7,
-    "title": "Ringtone 2",
-    "artist": "Artist 2",
-    "artwork": "https://picsum.photos/200/300",
+    "title": "Cold Summer",
+    "artist": "Makaih Beats",
+    "artwork": "https://freemusicarchive.org/image/?file=album_image%2F3FB6JdGt3fXKPRSKrUPgZ4nyBxNkwH98DbOj0FzH.png&width=290&height=290&type=album",
     "audio": "ringtone2.mp3",
     "license": "CC BY-ND",
     "source": "Free Music Archive"
   },
   {
     "id": 8,
-    "title": "Ringtone 3",
-    "artist": "Artist 3",
-    "artwork": "https://picsum.photos/200/300",
+    "title": "Triumphant Return",
+    "artist": "Audiorezout",
+    "artwork": "https://freemusicarchive.org/image/?file=album_image%2FnXUaXpkD5RPzcCKq3i96PozpI8R2QoMIPTMD3pky.jpg&width=290&height=290&type=album",
     "audio": "ringtone3.mp3",
     "license": "CC BY-ND",
     "source": "Free Music Archive"
   },
   {
     "id": 9,
-    "title": "Ringtone 4",
-    "artist": "Artist 4",
-    "artwork": "https://picsum.photos/200/300",
+    "title": "When I Met You",
+    "artist": "Maarten Schellekens",
+    "artwork": "https://freemusicarchive.org/image/?file=track_image%2FLFU0POtwxr8EuIUnHZilfG27SF4ZvjJNvpd7MHtR.png&width=290&height=290&type=track",
     "audio": "ringtone4.mp3",
     "license": "CC BY-ND",
     "source": "Free Music Archive"
   },
   {
     "id": 10,
-    "title": "Ringtone 5",
-    "artist": "Artist 5",
-    "artwork": "https://picsum.photos/200/300",
+    "title": "Sunbath",
+    "artist": "Dee Yan-Key",
+    "artwork": "https://freemusicarchive.org/image/?file=album_image%2FZpaa4tLdGdrbwpHWYRQNJHjQ01SKxm3bwAnxJLtN.jpg&width=290&height=290&type=album",
     "audio": "ringtone5.mp3",
-    "license": "CC BY-ND",
-    "source": "Free Music Archive"
-  },
-  {
-    "id": 11,
-    "title": "Ringtone 1",
-    "artist": "Artist 1",
-    "artwork": "https://picsum.photos/200/300",
-    "audio": "ringtone1.mp3",
-    "license": "CC BY-ND",
-    "source": "Free Music Archive"
-  },
-  {
-    "id": 12,
-    "title": "Ringtone 2",
-    "artist": "Artist 2",
-    "artwork": "https://picsum.photos/200/300",
-    "audio": "ringtone2.mp3",
-    "license": "CC BY-ND",
-    "source": "Free Music Archive"
-  },
-  {
-    "id": 13,
-    "title": "Ringtone 3",
-    "artist": "Artist 3",
-    "artwork": "https://picsum.photos/200/300",
-    "audio": "ringtone3.mp3",
-    "license": "CC BY-ND",
-    "source": "Free Music Archive"
-  },
-  {
-    "id": 14,
-    "title": "Ringtone 4",
-    "artist": "Artist 4",
-    "artwork": "https://picsum.photos/200/300",
-    "audio": "ringtone4.mp3",
-    "license": "CC BY-ND",
-    "source": "Free Music Archive"
-  },
-  {
-    "id": 15,
-    "title": "Ringtone 5",
-    "artist": "Artist 5",
-    "artwork": "https://picsum.photos/200/300",
-    "audio": "ringtone5.mp3",
-    "license": "CC BY-ND",
+    "license": "CC BY-NC",
     "source": "Free Music Archive"
   }
 ]

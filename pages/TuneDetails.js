@@ -12,8 +12,8 @@ import { Audio } from "expo-av";
 
 // Mapping object for audio file paths based on ID
 const audioFilePaths = {
-  1: require("../assets/audio/1.mp3"),
-  //2: require("../assets/audio/2.mp3"),
+  1: require("../assets/Lite Saturation - Nostalgia.mp3"),
+  2: require("../assets/Axel Lundstrom - Measure by measure.mp3"),
   // Add more audio file paths for different IDs as needed
 };
 

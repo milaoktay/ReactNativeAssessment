@@ -4,14 +4,15 @@
     "slug": "TestApp",
     "version": "1.0.0",
     "orientation": "portrait",
-
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/fallback-img.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -19,10 +20,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/fallback-img.jpg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.milaoktay.TestApp"
     },
     "web": {
       "favicon": "./assets/fallback-img.jpg"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f49c7a3b-2610-4946-a1fc-7dff0de2af63"
+      }
     }
   }
 }
