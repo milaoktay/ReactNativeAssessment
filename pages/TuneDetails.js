@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   StyleSheet,
   Text,
@@ -10,6 +10,13 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { Audio } from "expo-av";
 
+// Mapping object for audio file paths based on ID
+const audioFilePaths = {
+  1: require("../assets/audio/1.mp3"),
+  //2: require("../assets/audio/2.mp3"),
+  // Add more audio file paths for different IDs as needed
+};
+
 export const TuneDetails = ({ route }) => {
   const { tune } = route.params;
   const { id, title, artist, artwork, audio } = tune;
@@ -17,13 +24,9 @@ export const TuneDetails = ({ route }) => {
 
   const navigation = useNavigation();
 
-  console.log(audio);
-
   const handlePlayAudio = async () => {
     try {
-      const { sound } = await Audio.Sound.createAsync(
-        require(`../assets/audio/${1}.mp3`)
-      );
+      const { sound } = await Audio.Sound.createAsync(audioFilePaths[id]);
       setSound(sound);
       await sound.playAsync();
     } catch (error) {

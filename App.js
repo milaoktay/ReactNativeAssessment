@@ -12,7 +12,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <SafeAreaView style={styles.container}>
-        <StatusBar style="auto" color="white" />
+        <StatusBar style="light" />
         <Stack.Navigator>
           <Stack.Screen name="TuneList" component={TuneList} />
           <Stack.Screen name="TuneDetails" component={TuneDetails} />
