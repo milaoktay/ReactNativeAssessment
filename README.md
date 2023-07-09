@@ -33,10 +33,11 @@ The Details screen offers the following features:
 - Expo Web
 - Expo Android
 
-### Take a Look
+### Take a Look with Expo Go
 
-- Execute 'expo start' in terminal
-- Scan the QR code with Expo Go Android App
+- Download Expo Go from AppStore, register and login in terminal
+- Execute 'expo start' in terminal and scan the QR code with it
+- Or execute 'expo publish' in terminal, open the link and scan the QR code with your phone's camera
 
 ![Screen1]('./assets/screenshots/Screen1.jpg')
 ![Screen2]('./assets/screenshots/Screen2.jpg')

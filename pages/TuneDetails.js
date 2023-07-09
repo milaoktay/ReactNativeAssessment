@@ -9,17 +9,11 @@ import {
 } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { Audio } from "expo-av";
-
-// Mapping object for audio file paths based on ID
-const audioFilePaths = {
-  1: require("../assets/audio/Lite Saturation - Nostalgia.mp3"),
-  2: require("../assets/audio/Axel Lundstrom - Measure by measure.mp3"),
-  // Add more audio file paths for different IDs as needed
-};
+import { audioFilePaths } from "../assets/audio/audioFilePaths";
 
 export const TuneDetails = ({ route }) => {
   const { tune } = route.params;
-  const { id, title, artist, artwork, audio } = tune;
+  const { id, title, artist, artwork } = tune;
 
   const navigation = useNavigation();
   const soundRef = useRef(null);
@@ -66,11 +60,7 @@ export const TuneDetails = ({ route }) => {
     <View style={styles.container}>
       <View style={styles.detailsContainer}>
         <View style={styles.artworkContainer}>
-          <Image
-            source={{ uri: artwork }}
-            defaultSource={require("../assets/fallback-img.jpg")}
-            style={styles.artwork}
-          />
+          <Image source={{ uri: artwork }} style={styles.artwork} />
         </View>
         <View style={styles.textContainer}>
           <Text numberOfLines={1} style={styles.title}>
