@@ -13,6 +13,7 @@ The Details screen offers the following features:
 - Play Button: Users can play the ringtone by pressing the play button.
 - Pause Button: Users can pause the ringtone by pressing the pause button.
 - Back Button: Users can return to the List screen by pressing the back button.
+- Audio stops playing when the user leaves the Details screen.
 - Display Information: The Detail screen displays the title, artist's name, and artwork of the selected ringtone.
 
 #### Sources
@@ -27,10 +28,15 @@ The Details screen offers the following features:
 - @react-navigation/stack
 - @react-navigation/native
 
-### Testing
+#### Testing
 
 - Expo Web
 - Expo Android
+
+### Take a Look
+
+- Execute 'expo start' in terminal
+- Scan the QR code with Expo Go Android App
 
 ![Screen1]('./assets/screenshots/Screen1.jpg')
 ![Screen2]('./assets/screenshots/Screen2.jpg')

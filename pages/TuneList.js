@@ -1,13 +1,13 @@
 import { StyleSheet, View, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SingleTuneFromList } from "../components/SingleTuneFromList";
-import { useLayoutEffect } from "react";
 import React from "react";
-import ringtonesData from "./ringtones.json"; // Import the JSON data
+import ringtonesData from "../assets/ringtones.json"; // Import the JSON data
 
 export const TuneList = () => {
   const navigation = useNavigation();
 
+  //Top bar
   React.useLayoutEffect(() => {
     navigation.setOptions({
       title: "Top 100",

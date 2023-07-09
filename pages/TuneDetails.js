@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import {
   StyleSheet,
   Text,
@@ -7,7 +7,7 @@ import {
   Button,
   TouchableOpacity,
 } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { Audio } from "expo-av";
 
 // Mapping object for audio file paths based on ID
@@ -20,30 +20,31 @@ const audioFilePaths = {
 export const TuneDetails = ({ route }) => {
   const { tune } = route.params;
   const { id, title, artist, artwork, audio } = tune;
-  const [sound, setSound] = useState(null);
 
   const navigation = useNavigation();
+  const soundRef = useRef(null);
 
   const handlePlayAudio = async () => {
     try {
       const { sound } = await Audio.Sound.createAsync(audioFilePaths[id]);
-      setSound(sound);
+      soundRef.current = sound;
       await sound.playAsync();
     } catch (error) {
-      // handle error
+      console.log("Error playing audio:", error);
     }
   };
 
   const handlePauseAudio = async () => {
-    if (sound) {
+    if (soundRef.current) {
       try {
-        await sound.pauseAsync();
+        await soundRef.current.pauseAsync();
       } catch (error) {
-        // handle error
+        console.log("Error pausing audio:", error);
       }
     }
   };
 
+  //Top bar (go back arrow)
   React.useLayoutEffect(() => {
     navigation.setOptions({
       title: "",
@@ -54,9 +55,12 @@ export const TuneDetails = ({ route }) => {
     });
   }, [navigation]);
 
-  const handleGoBack = () => {
-    navigation.goBack();
-  };
+  //Pause audio on exit
+  useFocusEffect(() => {
+    return () => {
+      handlePauseAudio();
+    };
+  });
 
   return (
     <View style={styles.container}>
@@ -131,7 +135,7 @@ const styles = StyleSheet.create({
   button: {
     flex: 1,
     borderRadius: 10,
-    backgroundColor: "black",
+    backgroundColor: "#282727",
     justifyContent: "center",
     alignItems: "center",
     paddingVertical: 10,
